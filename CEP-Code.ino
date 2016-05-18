@@ -1,6 +1,8 @@
 //Libraries needed for all the Network Protocols
 #include <Arduino.h>
 
+//Will have to setup Arduino to add the ESP8266 Core libraries
+//Good tutorial -- https://learn.sparkfun.com/tutorials/esp8266-thing-hookup-guide/installing-the-esp8266-arduino-addon
 #include <ESP8266WiFi.h>
 #include <WiFiClient.h>
 #include <ESP8266WiFiMulti.h>
@@ -9,9 +11,11 @@
 #include <Hash.h>
 
 //Libraries needed for the GenSetMotorController
+//address for library download https://www.dimensionengineering.com/info/arduino
 #include <Sabertooth.h>
 #include <Wire.h>
 
+//Some debug and other variables
 #define DEBUG Serial
 #define debug true
 #define debugLoop false
@@ -191,4 +195,3 @@ void loop() {
    if (PRODUCTION == true && debug == false) {ST.turn(steer);}
     
 }
-
